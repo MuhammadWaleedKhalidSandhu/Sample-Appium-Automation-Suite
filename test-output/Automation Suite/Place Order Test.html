@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>TestNG:  Place Order Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Place Order Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Apr 13 13:10:00 PKT 2025</td>
+</tr>
+<tr><td>Total time:</td><td>22 seconds (22676 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.PlaceOrderTestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.PlaceOrderTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for a product and place an order end-to-end", "Place Order Flow"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4&apos;, java.version: &apos;21.0.6&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [bd895230-8de3-400b-bc48-faafedcf18f1, findElement {using=-android uiautomator, value=new UiSelector().className(&quot;android.widget.ImageView&quot;).instance(10)}]
+Capabilities {appium:app: /Users/waleed/Downloads/326..., appium:appActivity: com.nahdi.sirius.staging.Ma..., appium:appPackage: com.nahdi.main, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/waleed/Downloads/326..., automationName: UiAutomator2, deviceName: TECNO SPARK 20 Pro+, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 14, udid: 115333741O006165}, appium:deviceApiLevel: 34, appium:deviceManufacturer: TECNO, appium:deviceModel: TECNO KJ7, appium:deviceName: 115333741O006165, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2436, appium:deviceUDID: 115333741O006165, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 108, appium:takesScreenshot: true, appium:udid: 115333741O006165, appium:viewportRect: {height: 2328, left: 0, top: 108, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: bd895230-8de3-400b-bc48-faafedcf18f1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at stepdefs.PlaceOrderSteps.iTapOnTheProductImage(PlaceOrderSteps.java:59)
+	at ✽.I tap on the product image(file:///Users/waleed/eclipse-workspace/AppiumDemoProject/src/test/resources/place_order.feature:29)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1881585646", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1881585646'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.31.0&apos;, revision: &apos;1ef9f18787*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.4&apos;, java.version: &apos;21.0.6&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [bd895230-8de3-400b-bc48-faafedcf18f1, findElement {using=-android uiautomator, value=new UiSelector().className(&quot;android.widget.ImageView&quot;).instance(10)}]
+Capabilities {appium:app: /Users/waleed/Downloads/326..., appium:appActivity: com.nahdi.sirius.staging.Ma..., appium:appPackage: com.nahdi.main, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: /Users/waleed/Downloads/326..., automationName: UiAutomator2, deviceName: TECNO SPARK 20 Pro+, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 14, udid: 115333741O006165}, appium:deviceApiLevel: 34, appium:deviceManufacturer: TECNO, appium:deviceModel: TECNO KJ7, appium:deviceName: 115333741O006165, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2436, appium:deviceUDID: 115333741O006165, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 3, appium:platformVersion: 14, appium:statBarHeight: 108, appium:takesScreenshot: true, appium:udid: 115333741O006165, appium:viewportRect: {height: 2328, left: 0, top: 108, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: bd895230-8de3-400b-bc48-faafedcf18f1
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at stepdefs.PlaceOrderSteps.iTapOnTheProductImage(PlaceOrderSteps.java:59)
+	at ✽.I tap on the product image(file:///Users/waleed/eclipse-workspace/AppiumDemoProject/src/test/resources/place_order.feature:29)
+</pre></div></td>
+<td>22</td>
+<td>runners.PlaceOrderTestRunner@7d20d0b</td></tr>
+</table><p>
+</body>
+</html>
